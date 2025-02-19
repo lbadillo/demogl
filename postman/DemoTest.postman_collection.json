@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "33842192-1c0e-4a9a-97b2-53b22f15fbb1",
+		"name": "DemoTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "349862"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"perri\",\n    \"email\":\"perr@gato.com\",\n    \"password\": \"X2y4zmiop\",\n    \"phones\": [\n        {\n            \"number\":12345,\n            \"citycode\": 2,\n            \"countrycode\": \"pe\"\n        },\n         {\n            \"number\":12347,\n            \"citycode\": 4,\n            \"countrycode\": \"pe\"\n        }\n\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJyQGdhdG8uY29tIiwiaWF0IjoxNzM5OTc2OTMzLCJleHAiOjE3Mzk5OTg1MzN9.XLb6Fgqwenjkd14gyG8FCicA5mOGDN-DZQh47Eiscm0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
