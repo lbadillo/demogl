@@ -31,10 +31,15 @@ Th application run on port 8080 and have no profiles to run.
 
 ### Test
 You can use the postman collection found in the postman folder to test the application.
+
+`postman/DemoTest.postman_collection.json`
+
 the steps to follow are.
-1. Execute the request called signup, to create the user.
-2. Once executed, take the token field from the request response and save it.
-3. Execute the request called login, update the value of the authorization header with the token that I saved from the previous step.
+1. Import the collection into you r workspace in postman.
+2. Ones you have imported the collection, you will see a nee collection called DemoTest.
+3. Execute the request called signup, to create the user.
+4. Once executed, take the token field from the request response and save it.
+5. Execute the request called login, update the value of the authorization header with the token that I saved from the previous step.
 
 
 

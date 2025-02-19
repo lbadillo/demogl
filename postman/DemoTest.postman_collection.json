@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"perri\",\n    \"email\":\"perr@gato.com\",\n    \"password\": \"X2y4zmiop\",\n    \"phones\": [\n        {\n            \"number\":12345,\n            \"citycode\": 2,\n            \"countrycode\": \"pe\"\n        },\n         {\n            \"number\":12347,\n            \"citycode\": 4,\n            \"countrycode\": \"pe\"\n        }\n\n    ]\n}",
+					"raw": "{\n    \"name\":\"juan gonzales\",\n    \"email\":\"juangon@gmail.com\",\n    \"password\": \"X2y4zmiop\",\n    \"phones\": [\n        {\n            \"number\":12345,\n            \"citycode\": 2,\n            \"countrycode\": \"co\"\n        },\n         {\n            \"number\":12347,\n            \"citycode\": 4,\n            \"countrycode\": \"co\"\n        }\n\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,7 +43,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJyQGdhdG8uY29tIiwiaWF0IjoxNzM5OTc2OTMzLCJleHAiOjE3Mzk5OTg1MzN9.XLb6Fgqwenjkd14gyG8FCicA5mOGDN-DZQh47Eiscm0",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJyQGdhdG8uY29tIiwiaWF0IjoxNzM5OTg1NjczLCJleHAiOjE3NDAwMDcyNzN9.Lw717a_K3_OH9WL1me5o-Ylv2h2Ey4uIKMWfWn2YEsM",
 							"type": "string"
 						}
 					]
