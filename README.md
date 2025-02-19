@@ -75,7 +75,9 @@ the steps to follow are.
 4. Once executed, take the token field from the request response and save it.
 5. To execute the request called login, update the value of the authorization header with the token that you saved from the previous step.
 
+or use swagger
 
+http://localhost:8080/swagger-ui/
 
 
 # Technical Information
