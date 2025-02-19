@@ -26,8 +26,42 @@ When the project build finishes, you must go to the /build/libs folder and execu
 `java -jar demo-0.0.1-SNAPSHOT.jar`
 
 
-Th application run on port 8080 and have no profiles to run.
+The application run on port 8080 and have no profiles to run.
+so you will have two endpoints:
+* http://localhost:8080/api/sign-up
+```
+Request payload sample:
 
+{
+    "name":"juan gonzales",
+    "email":"juangon@gmail.com",
+    "password": "X2y4zmiop",
+    "phones": [
+        {
+            "number":12345,
+            "citycode": 2,
+            "countrycode": "co"
+        },
+         {
+            "number":12347,
+            "citycode": 4,
+            "countrycode": "co"
+        }
+
+    ]
+}
+```
+* http://localhost:8080/api/login
+```
+You need to add a header authorization bearer with the token of the previous request 
+```
+* http://localhost:8080/h2-console
+```
+h2 connection:
+database url: jdbc:h2:mem:testdb
+user: sa
+password: password
+```
 
 ### Test
 You can use the postman collection found in the postman folder to test the application.
@@ -36,10 +70,11 @@ You can use the postman collection found in the postman folder to test the appli
 
 the steps to follow are.
 1. Import the collection into you r workspace in postman.
-2. Ones you have imported the collection, you will see a nee collection called DemoTest.
+2. Ones you have imported the collection, you will see a new collection called DemoTest.
 3. Execute the request called signup, to create the user.
 4. Once executed, take the token field from the request response and save it.
-5. Execute the request called login, update the value of the authorization header with the token that I saved from the previous step.
+5. To execute the request called login, update the value of the authorization header with the token that you saved from the previous step.
+
 
 
 

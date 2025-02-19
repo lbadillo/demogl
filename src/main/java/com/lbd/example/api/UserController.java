@@ -41,7 +41,7 @@ public class UserController {
         if (Objects.nonNull(token)) {
             return userService.getUser(token.split(" ")[1]);
         } else {
-            throw new UserException("User not found");
+            throw new UserException("authorization bearer header must be present");
         }
 
 
