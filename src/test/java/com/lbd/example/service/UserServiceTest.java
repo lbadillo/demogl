@@ -6,6 +6,7 @@ import com.lbd.example.entity.UserEntity;
 import com.lbd.example.error.CryptoException;
 import com.lbd.example.error.UserException;
 import com.lbd.example.repository.UserRepository;
+import com.lbd.example.service.impl.UserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,7 +15,6 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static com.lbd.example.Util.TOKEN;
-import static com.lbd.example.Util.createNoHeader;
 import static com.lbd.example.Util.createPhoneList;
 import static com.lbd.example.Util.createUser;
 import static com.lbd.example.Util.createUserEntity;

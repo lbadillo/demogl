@@ -32,8 +32,8 @@ public class HandleExceptions {
     }
     /**
      *
-     * @param exception
-     * @return  ErrorDTO error description
+     * @param UserException
+     * @return create a new error response with details of exception
      */
     @ExceptionHandler(UserException.class)
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
@@ -47,6 +47,11 @@ public class HandleExceptions {
                 .build();
     }
 
+    /**
+     *
+     * @param CryptoException
+     * @return create a new error response with details of exception
+     */
     @ExceptionHandler(CryptoException.class)
     @ResponseStatus(code = HttpStatus.FAILED_DEPENDENCY)
     public @ResponseBody ErrorDTO handleCryptoException(

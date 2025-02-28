@@ -1,12 +1,15 @@
 package com.lbd.example.config;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.List;
+/**
+ * Author: Ludwing Badillo
+ * Configuration properties class.
+ * Prefix in application.properties: security
+ */
 
 @Configuration
 @ConfigurationProperties(prefix = "security")

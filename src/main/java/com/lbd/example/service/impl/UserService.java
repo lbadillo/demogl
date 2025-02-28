@@ -1,4 +1,4 @@
-package com.lbd.example.service;
+package com.lbd.example.service.impl;
 
 import com.lbd.example.config.ConfigProperties;
 import com.lbd.example.domain.UserDTO;
@@ -6,6 +6,7 @@ import com.lbd.example.entity.UserEntity;
 import com.lbd.example.error.CryptoException;
 import com.lbd.example.error.UserException;
 import com.lbd.example.repository.UserRepository;
+import com.lbd.example.service.IUserService;
 import com.lbd.example.util.AESUtil;
 import com.lbd.example.util.Constant;
 import com.lbd.example.util.PhoneTranslate;
@@ -27,15 +28,30 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 
+/**
+ * Author: Ludwing Badillo
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserService implements IUserService {
 
+    /**
+     * Repository injected
+     */
     private final UserRepository userRep;
+    /**
+     * properties injected
+     */
     private final ConfigProperties properties;
 
 
+    /**
+     * Implementation of interface
+     * @param userDTO
+     * @return new user
+     */
+    @Override
     public UserDTO createUser(UserDTO userDTO) {
         if (Objects.isNull(userRep.findByEmail(userDTO.getEmail()))) {
             userDTO.setIsActive(true);
@@ -59,6 +75,12 @@ public class UserService {
 
     }
 
+    /**
+     * Implementation of interface
+     * @param token
+     * @return user by token
+     */
+    @Override
     public UserDTO getUser(String token) {
         UserEntity response = userRep.findByToken(token);
         if (Objects.nonNull(response)) {
@@ -72,6 +94,12 @@ public class UserService {
             throw new UserException("User not found");
         }
     }
+
+    /**
+     * Private function to encrypt a text
+     * @param text
+     * @return crypto text
+     */
 
     private String cryptoFunction(String text) {
         try {
@@ -90,11 +118,20 @@ public class UserService {
         }
     }
 
+    /**
+     *
+     * @return new ID for user (UUID)
+     */
     private String createUUID() {
         UUID uuid = UUID.randomUUID();
         return uuid.toString();
     }
 
+    /**
+     *
+     * @param email
+     * @return createe a new token
+     */
     private String createJws(String email) {
         long expirationTime = Constant.EXPIRATION_TIME;
         Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);

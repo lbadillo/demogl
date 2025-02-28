@@ -6,6 +6,11 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 
+/**
+ * Author: Ludwing Badillo
+ * Error DTO
+ */
+
 @Data
 @Builder
 public class ErrorDTO {

@@ -69,7 +69,7 @@ You can use the postman collection found in the postman folder to test the appli
 `postman/DemoTest.postman_collection.json`
 
 the steps to follow are.
-1. Import the collection into you r workspace in postman.
+1. Import the collection  (DemoTest.postman_collection.json) into your workspace in postman.
 2. Ones you have imported the collection, you will see a new collection called DemoTest.
 3. Execute the request called signup, to create the user.
 4. Once executed, take the token field from the request response and save it.

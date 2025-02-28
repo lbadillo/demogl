@@ -2,17 +2,14 @@ package com.lbd.example.api;
 
 import com.lbd.example.domain.UserDTO;
 import com.lbd.example.error.UserException;
-import com.lbd.example.service.UserService;
-import com.lbd.example.util.Constant;
+import com.lbd.example.service.IUserService;
+import com.lbd.example.service.impl.UserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import java.time.LocalDateTime;
-import java.util.HashMap;
 
 import static com.lbd.example.Util.createHeader;
 import static com.lbd.example.Util.createNoHeader;
@@ -26,7 +23,7 @@ import static org.mockito.Mockito.when;
 public class UserControllerTest {
 
     @Mock
-    private UserService service;
+    private IUserService service;
 
     @InjectMocks
     private UserController controller;
